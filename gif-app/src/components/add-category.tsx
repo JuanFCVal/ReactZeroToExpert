@@ -9,9 +9,10 @@ const AddCategory: FunctionComponent<IProps> = (
 ) => {
     const [query, setQuery] = useState('')
     const handleSubmit = (event: FormEvent) => { 
-        setCategories((categories : any) => [...categories, query])
         event.preventDefault()
-        console.log(query)
+        if(query.length <= 2) return
+        setCategories((categories : any) => [...categories, query])
+        setQuery('')
     }
     return (
         <>
