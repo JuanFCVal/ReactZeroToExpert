@@ -5,20 +5,21 @@ const GifExpertApp = () => {
 
     const [categories, setcategories] = useState(['Pokemon'])
 
-    const onAddCategory = () => {
-        setcategories([...categories, 'HunterXHunter'])
+    const onAddCategory = (value: string) => {
+        setcategories([...categories, value])
     }
     console.log(categories)
     return (
         <>
             <h1>Gif Experts</h1>
-            <AddCategory setCategories= {setcategories}></AddCategory>
+            <AddCategory
+            onNewCategory = { (value: string) => onAddCategory(value)}
+          ></AddCategory>
             <ol>
                 { categories.map(
                     category => <li key={category}>{category}</li>
                 )}
             </ol>
-            <button onClick={onAddCategory}>Agregar</button>
         </>
     )
 }

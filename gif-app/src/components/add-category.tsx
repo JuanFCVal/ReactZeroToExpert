@@ -2,16 +2,16 @@ import React, { FormEvent, FunctionComponent } from 'react'
 import { useState } from 'react';
 
 interface IProps {
-    setCategories: Function
+    onNewCategory: Function
 }
 const AddCategory: FunctionComponent<IProps> = (
-    { setCategories }
+    { onNewCategory }
 ) => {
     const [query, setQuery] = useState('')
     const handleSubmit = (event: FormEvent) => { 
         event.preventDefault()
         if(query.length <= 2) return
-        setCategories((categories : any) => [...categories, query])
+        onNewCategory(query)
         setQuery('')
     }
     return (
