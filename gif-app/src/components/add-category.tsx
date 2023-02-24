@@ -1,9 +1,15 @@
-import React, { FormEvent } from 'react'
+import React, { FormEvent, FunctionComponent } from 'react'
 import { useState } from 'react';
 
-const AddCategory = () => {
+interface IProps {
+    setCategories: Function
+}
+const AddCategory: FunctionComponent<IProps> = (
+    { setCategories }
+) => {
     const [query, setQuery] = useState('')
     const handleSubmit = (event: FormEvent) => { 
+        setCategories((categories : any) => [...categories, query])
         event.preventDefault()
         console.log(query)
     }

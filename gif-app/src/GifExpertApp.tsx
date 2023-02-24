@@ -12,7 +12,7 @@ const GifExpertApp = () => {
     return (
         <>
             <h1>Gif Experts</h1>
-            <AddCategory></AddCategory>
+            <AddCategory setCategories= {setcategories}></AddCategory>
             <ol>
                 { categories.map(
                     category => <li key={category}>{category}</li>
