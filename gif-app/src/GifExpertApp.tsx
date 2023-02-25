@@ -8,7 +8,7 @@ const GifExpertApp = () => {
 
     const onAddCategory = (value: string) => {
         const category = categories.find(category => category === value)
-        !category && setcategories([...categories, value])
+        !category && setcategories([ value, ...categories])
     }
     return (
         <>
@@ -16,7 +16,6 @@ const GifExpertApp = () => {
             <AddCategory
             onNewCategory = { (value: string) => onAddCategory(value)}
           ></AddCategory>
-
             {
                 categories.map( (category) => (
                     <GifGrid  key={category} category={category}></GifGrid>
