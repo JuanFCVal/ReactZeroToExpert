@@ -12,7 +12,9 @@ const GifGrid: FC<IGifGridProps> = ({ category }) => {
         <>    <h2>
             {category} </h2>
             <div className='card-grid'>
-                <br />
+                {
+                    isLoading && <p>Loading...</p>
+                }
                 {
                     images.map(
                         (gif: IGifItem) => (
