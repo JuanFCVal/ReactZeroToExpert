@@ -6,7 +6,8 @@ const GifExpertApp = () => {
     const [categories, setcategories] = useState(['Pokemon'])
 
     const onAddCategory = (value: string) => {
-        setcategories([...categories, value])
+        const category = categories.find(category => category === value)
+        !category && setcategories([...categories, value])
     }
     console.log(categories)
     return (
