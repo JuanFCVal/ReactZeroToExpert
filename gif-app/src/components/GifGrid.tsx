@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from 'react'
 import { IGifItem } from '../interfaces/gifItem'
 import { getGifs } from '../services/gif_service'
-import GifItem from './GifItem'
 import useFetchGifs from '../hooks/useFetchGifs';
+import GifItem from './GifItem/GifItem';
 interface IGifGridProps {
     category: string
 }

@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { IGifItem } from '../interfaces/gifItem'
+import { IGifItem } from '../../interfaces/gifItem'
 interface IGifItemProps{
     gif: IGifItem
 }
