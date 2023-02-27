@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
 import { IGifItem } from "../interfaces/gifItem"
-import { getGifs } from "../services/gif_service"
-
-
-const useFetchGifs = (category: string) => {
+import  { getGifs }  from "../services/gif_service"
+ 
+export const useFetchGifs = (category: string) => {
     const [images, setimages] = useState<IGifItem[]>([])
     const [isLoading, setIsLoading] = useState(true)
     const getGifsForComponent = async () => {
@@ -20,4 +19,3 @@ const useFetchGifs = (category: string) => {
     }
 }
 
-export default useFetchGifs
