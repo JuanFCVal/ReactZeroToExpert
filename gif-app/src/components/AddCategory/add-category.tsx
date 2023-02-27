@@ -16,7 +16,7 @@ const AddCategory: FunctionComponent<IProps> = (
     }
     return (
         <>
-            <form onSubmit={(event) => handleSubmit(event)}>
+            <form onSubmit={(event) => handleSubmit(event)} aria-label="form">
                 <input
                     type="text"
                     placeholder='Categoria'
