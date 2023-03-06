@@ -10,7 +10,6 @@ const [counter, setCounter] = useState({
     <>
     <h2>Use State Hook</h2>
     <h3>Counter: {counter.counter1}</h3>
-    <hr />
     <button className='btn' onClick={() => setCounter(
         {
             ...counter,
