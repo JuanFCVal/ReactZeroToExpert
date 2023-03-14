@@ -11,10 +11,17 @@ const useForm = (initialForm : Record<string, any>) => {
         })
     }
     
+    const onResetForm = () => {
+        console.log('resetForm')
+        setFormState(
+           initialForm
+        )
+    }
+    
     return {
         formState,
         onInputChange,
-        ...formState
+        onResetForm,
     }
 }
 

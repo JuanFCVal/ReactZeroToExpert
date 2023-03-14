@@ -3,7 +3,7 @@ import useForm from '../../hooks/useForm';
 import Message from './Message';
 
 const SimpleFormWithHook = () => {
-    const { formState, onInputChange } = useForm({
+    const { formState, onInputChange, onResetForm } = useForm({
         userName : '',
         email : '',
         password: ''
@@ -21,6 +21,7 @@ const SimpleFormWithHook = () => {
             </input>
             <input name="password"  onChange={(event) => onInputChange(event)} value={password}  type="password" className="form-control mt-2" placeholder="password">
             </input>
+            <button className='btn mt-2 btn-primary' onClick={onResetForm}>Borrar</button>
             {
                 userName === "strider2" &&  <Message/>
             }
