@@ -15,11 +15,6 @@ const SimpleForm = () => {
             [name]: value
         })
     }
-
-    useEffect(() => {
-        console.log("HOla UseEFect")
-    }, [])
-    
     return (
         <>
             <hr />
